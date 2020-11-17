@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Regular Expression</title>
+<link rel="stylesheet" type="text/css" href="index.css"/>
+<link rel="stylesheet" type="text/css" href="reset.css"/>
+</head>
+<body>
+    <form class="content">
+        <ui class="register">
+            <h2 class="title">帳號密碼設定</h2>
+                <li>
+                    <b>
+                        帳號
+                    </b>
+                        <input onblur="checkAcct()" type="text" id="acct" placeholder="請輸入帳號" maxlength="20"/>
+                        <span id="acctNo" class="checkNo"><em>&#10008</em>帳號僅能輸入4~15碼英文大小寫及數字</span>
+                        <span id="acctYes"class="checkYes"><em>&#10004</em></span>
+                </li>
+                <li>
+                    <b>
+                        密碼
+                    </b>
+                        <input onblur="checkPwd()" type="password" id="pwd" placeholder="請輸入密碼" maxlength="20"/>
+                        <span id="pwdNo1" class="checkNo"><em>&#10008</em>密碼僅能輸入 6-12 大小寫英文及數字</span>
+                        <span id="pwdNo2" class="checkNo"><em>&#10008</em>密碼至少包含一大寫英文</span>
+                        <span id="pwdYes" class="checkYes"><em>&#10004</em></span>
+                </li>
+                <li>
+                    <b>
+                        確認密碼
+                    </b>
+                        <input onblur="checkAgain()" type="password" id="again" placeholder="請在輸入一次密碼" maxlength="20"/>
+                        <span id="againNo" class="checkNo"><em>&#10008</em>密碼確定不符</span>
+                        <span id="againYes" class="checkYes"><em></em>&#10004</span>
+                </li>
+            <h2 class=title> 會員資料 </h2>
+                <li>
+                    <b>
+                        暱稱
+                    </b>
+                        <input onblur="checkName()" type="text" id="name" placeholder="請輸入暱稱" maxlength="20"/>
+                        <span id="nameNo1" class="checkNo"><em>&#10008</em>僅能輸入2-10字元</span>
+                        <span id="nameNo2" class="checkNo"><em>&#10008</em>名稱中不可包含{}[]"</span>
+                        <span id="nameYes" class="checkYes"><em></em>&#10004</span>
+                </li>
+                <li>
+                    <b>
+                        真實姓名
+                    </b>
+                        <input onblur="checkUser()" type="text" id="user" placeholder="請輸入姓名" maxlength="20"/>
+                        <span id="userNo" class="checkNo"><em>&#10008</em>不可輸入數字、空白及特殊符號</span>
+                        <span id="userNo1" class="checkNo"><em>&#10008</em>名稱最多輸入6字元</span>
+                        <span id="userYes" class="checkYes"><em></em>&#10004</span>
+                </li>
+                <li>
+                    <b>
+                        英文姓名
+                    </b>
+                        <input onblur="checkEng()" type="text" id="eng" placeholder="請輸入英文名子" maxlength="20"/>
+                        <span id="engNo" class="checkNo"><em>&#10008</em>不能輸入特殊字元</span>
+                        <span id="engYes" class="checkYes"><em></em>&#10004</span>
+                </li>
+                <li>
+                    <b>
+                        生日
+                    </b>
+                        <input onblur="checkBir()" type="text" id="bir" placeholder="EX:dd/mm/yyyy" maxlength="20"/>
+                        <span id="birNo" class="checkNo"><em>&#10008</em>格式錯誤</span>
+                        <span id="birYes" class="checkYes"><em></em>&#10004</span>
+                </li>
+                <li>
+                    <b>
+                        國家
+                    </b>
+                        <input onblur="checkCity()" type="text" id="city" placeholder="請輸入國家" maxlength="20"/>
+                        <span id="cityNo" class="checkNo"><em>&#10008</em>不能輸入特殊字元,但可以輸入空格</span>
+                        <span id="cityYes" class="checkYes"><em></em>&#10004</span>
+                </li>
+                <li>
+                    <b>
+                        證件
+                    </b>
+                        <input onblur="checkCert()" type="text" id="cert" placeholder="請輸入證件" maxlength="20"/>
+                        <span id="certNo" class="checkNo"><em>&#10008</em>不能輸入特殊符號</span>
+                        <span id="certNo1" class="checkNo"><em>&#10008</em>格式錯誤</span>
+                        <span id="certYes" class="checkYes"><em></em>&#10004</span>
+                </li>
+                <li>
+                    <b>
+                        手機
+                    </b>
+                        <input onblur="checkPhone()" type="text" id="phone" placeholder="EX:+886 9xxxxxxxx、09xxxxxxxx" maxlength="20"/>
+                        <span id="phoneNo" class="checkNo"><em>&#10008</em>僅能數字但可以包含+開頭</span>
+                        <span id="phoneYes" class="checkYes"><em></em>&#10004</span>
+                </li>
+            <div class="btn">
+                <input type="button" class="clear" value="清除" onclick="javascript:window.location.reload()"/>
+                <input type="button" class="sub" id="sub" value="確定"/>
+            </div>
+        </ul>
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>
